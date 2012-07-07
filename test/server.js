@@ -168,7 +168,7 @@ function launchServer() {
     var binpath = null;
     process.env['PATH'].split(':').some(function(p) {
       var bin = path.resolve(p, binary);
-      if (path.existsSync(bin)) {
+      if (fs.existsSync(bin)) {
         binpath = bin;
         return true;
       }
